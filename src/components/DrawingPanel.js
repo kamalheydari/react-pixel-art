@@ -9,8 +9,8 @@ import Row from "./Row";
 const DrawingPanel = ({ width, height, selectedColor }) => {
   let rows = [];
 
-  for (let i = 0; i < width; i++) {
-    rows.push(<Row key={i} />);
+  for (let i = 0; i < height; i++) {
+    rows.push(<Row key={i} width={width} selectedColor={selectedColor} />);
   }
 
   return (
