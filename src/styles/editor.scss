@@ -1,72 +1,48 @@
 @import "properties.scss";
 
-#editor {
-  border: 1px solid $red;
-  border-radius: 0.25rem;
-  padding: 1rem 4rem 2rem 4rem;
-  margin-top: 2rem;
-
+.editor {
+  background-color: $primary-color;
+  border-radius: 0.65rem;
+  padding: 3rem 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 2rem;
 
-  h1 {
-    margin-bottom: 1.5rem;
+  &__bg {
+    width: 100%;
+    height: auto;
   }
 
-  h2 {
-    margin-bottom: 1rem;
-  }
-
-  #options {
+  &__options {
     display: flex;
-    margin-bottom: 3rem;
+    column-gap: 2rem;
+  }
+
+  &__input {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    gap: 0.7rem;
 
-    .option {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .panelInput {
-      height: 5rem;
+    input {
+      border-radius: 0.65rem;
       width: 5rem;
-      font-size: 2rem;
+      height: 5rem;
       text-align: center;
-      background-color: $black;
-      color: $white;
-      border: 1px solid $grey;
-      border-radius: 0.25rem;
-      margin: 0 1rem 0.5rem 1rem;
-      padding-left: 1rem;
+      background-color: $color-1;
+      font-size: 1.3rem;
+      color: $color-2;
+      transition: 0.3s;
 
-      &:focus {
-        outline: none !important;
-        border-color: $red;
-        box-shadow: 0 0 0.5rem $grey;
+      &:hover {
+        box-shadow: 0rem 0rem 1rem $second-color;
       }
     }
-  }
-
-  .button {
-    font-size: 1.25rem;
-    background-color: $red;
-    color: $white;
-    padding: 1rem 3rem;
-    border-radius: 0.25rem;
-    text-transform: uppercase;
-    border: 1px solid transparent;
-    transition: background-color 0.2s ease-in-out;
-    margin-bottom: 2rem;
-
-    &:hover {
-      cursor: pointer;
-      background-color: transparent;
-      border-color: $red;
+    span {
+      color: $color-2;
+      font-size: 1.4rem;
     }
-  }
-
-  .circle-picker {
-    margin-bottom: 1.5rem !important;
   }
 }

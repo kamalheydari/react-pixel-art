@@ -2,3 +2,38 @@ $black: #222831;
 $grey: #30475e;
 $white: #e8e8e8;
 $red: #f05454;
+
+$primary-color: #bcffb9;
+$second-color: #2bffbf;
+$text-color: #105652;
+$color-1: #f5fdb0;
+$color-2: #b91646;
+
+//? RESPONSIVE
+@mixin responsive($breakpoint) {
+  @if ($breakpoint == sm) {
+    @media (min-width: 576px) {
+      @content;
+    }
+  }
+  @if ($breakpoint == md) {
+    @media (min-width: 768px) {
+      @content;
+    }
+  }
+  @if ($breakpoint == lg) {
+    @media (min-width: 992px) {
+      @content;
+    }
+  }
+  @if ($breakpoint == xl) {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  }
+  @if ($breakpoint == xxl) {
+    @media (min-width: 1400px) {
+      @content;
+    }
+  }
+}

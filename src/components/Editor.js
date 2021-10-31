@@ -1,79 +1,81 @@
 import React, { useState } from "react";
 import { CirclePicker } from "react-color";
 
+//? Context
+import { useGlobalContext } from "../context/context";
+
 //? Styles
 import "../styles/editor.scss";
 
 //? Components
 import DrawingPanel from "./DrawingPanel";
 
+//? Images
+import pixelArt from "../assets/pixelArt.svg";
+
 const Editor = () => {
-  //? States
-  const [panelWidth, setPanelWidth] = useState(16);
-  const [panelHeight, setPanelHeight] = useState(16);
-  const [hideOptions, setHideOptions] = useState(false);
-  const [hideDrawingPanel, setHideDrawingPanel] = useState(true);
-  const [buttonText, setButtonText] = useState("start drawing");
-  const [selectedColor, setSelectedColor] = useState("#f44336");
-
-  const initializeDrawingPanel = () => {
-    setHideOptions(!hideOptions);
-    setHideDrawingPanel(!hideDrawingPanel);
-
-    buttonText === "start drawing"
-      ? setButtonText("reset")
-      : setButtonText("start drawing");
-  };
-
-  const changeColor = (color) => {
-    setSelectedColor(color.hex);
-  };
+  const {
+    panelWidth,
+    setPanelWidth,
+    panelHeight,
+    setPanelHeight,
+    isOptions,
+    isDrawingPanel,
+    buttonText,
+    selectedColor,
+    initializeDrawingPanel,
+    changeColor,
+  } = useGlobalContext();
 
   return (
-    <div id="editor">
-      <h1>Pixel Editor</h1>
-      {hideDrawingPanel && <h2>Enter Panel Dimensions</h2>}
-      {hideDrawingPanel && (
-        <div id="options">
-          <div className="option">
+    <div className="editor">
+      <div className="editor__bg">
+        <img src={pixelArt} alt="pixel art" />
+      </div>
+      {isDrawingPanel && (
+        <h2 className="editor__heading">Enter Panel Dimensions</h2>
+      )}
+      {isDrawingPanel && (
+        <div className="editor__options">
+          <div className="editor__input">
             <input
               type="number"
-              defaultValue={panelWidth}
+              value={panelWidth}
+              max="80"
+              min="4"
               onChange={(e) => {
                 setPanelWidth(e.target.value);
               }}
-              className="panelInput"
             />
             <span>Width</span>
           </div>
-          <div className="option">
+          <div className="editor__input">
             <input
               type="number"
-              defaultValue={panelHeight}
+              value={panelHeight}
+              max="30"
+              min="4"
               onChange={(e) => {
                 setPanelHeight(e.target.value);
               }}
-              className="panelInput"
             />
             <span>Height</span>
           </div>
         </div>
       )}
-      <button onClick={initializeDrawingPanel} className="button">
+      <button onClick={initializeDrawingPanel} className="editor__btn button">
         {buttonText}
       </button>
 
-      {hideOptions && (
-        <CirclePicker color={selectedColor} onChangeComplete={changeColor} />
-      )}
-
-      {hideOptions && (
-        <DrawingPanel
-          width={panelWidth}
-          height={panelHeight}
-          selectedColor={selectedColor}
+      {isOptions && (
+        <CirclePicker
+          color={selectedColor}
+          onChangeComplete={changeColor}
+          className="editor__btn"
         />
       )}
+
+      {isOptions && <DrawingPanel />}
     </div>
   );
 };

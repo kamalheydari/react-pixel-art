@@ -1,4 +1,9 @@
 import React from "react";
+import { useRef } from "react";
+import { exportComponentAsPNG } from "react-component-export-image";
+
+//? Context
+import { useGlobalContext } from "../context/context";
 
 //? Style
 import "../styles/drawingPanel.scss";
@@ -6,16 +11,27 @@ import "../styles/drawingPanel.scss";
 //? Components
 import Row from "./Row";
 
-const DrawingPanel = ({ width, height, selectedColor }) => {
+const DrawingPanel = () => {
+  const { panelHeight } = useGlobalContext();
+  const panelRef = useRef();
+
   let rows = [];
 
-  for (let i = 0; i < height; i++) {
-    rows.push(<Row key={i} width={width} selectedColor={selectedColor} />);
+  for (let i = 0; i < panelHeight; i++) {
+    rows.push(<Row key={i} />);
   }
 
   return (
-    <div id="drawingPanel">
-      <div id="pixels">{rows}</div>
+    <div className="drawing-panel">
+      <div className="drawing-panel__pixels" ref={panelRef}>
+        {rows}
+      </div>
+      <button
+        onClick={() => exportComponentAsPNG(panelRef)}
+        className="drawing-panel__btn  button"
+      >
+        Export as PNG
+      </button>
     </div>
   );
 };

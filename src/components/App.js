@@ -1,15 +1,11 @@
 import React from "react";
 //? Styles
-import "../styles/App.scss";
+import "../styles/app.scss";
 //? Components
 import Editor from "./Editor";
 
 const App = () => {
-  return (
-    <div className="App">
-      <Editor />
-    </div>
-  );
+  return <Editor />;
 };
 
 export default App;

@@ -4,12 +4,14 @@ import React from "react";
 import Pixel from "./Pixel";
 //? Styles
 import "../styles/row.scss";
+import { useGlobalContext } from "../context/context";
 
-const Row = ({ width, selectedColor }) => {
+const Row = () => {
+  const { panelWidth } = useGlobalContext();
   let pixels = [];
 
-  for (let i = 0; i < width; i++) {
-    pixels.push(<Pixel key={i} selectedColor={selectedColor} />);
+  for (let i = 0; i < panelWidth; i++) {
+    pixels.push(<Pixel key={i} />);
   }
   return <div className="row">{pixels}</div>;
 };

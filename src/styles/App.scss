@@ -1,19 +1,56 @@
 @import "properties.scss";
 @import url("https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap");
 
-body,
-html {
+*,
+::after,
+::before {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  color: $text-color;
+}
+html {
+  font-size: 0.75rem;
+  @include responsive(sm) {
+    font-size: 0.812rem;
+  }
+  @include responsive(md) {
+    font-size: 0.875rem;
+  }
+  // @include responsive(lg) {
+  //   font-size: 0.937rem;
+  // }
+  // @include responsive(xl) {
+  //   font-size: 1rem;
+  // }
+  // @include responsive(xxl) {
+  //   font-size: 1.1rem;
+  // }
+}
+body {
+  background: $second-color;
+  display: grid;
+  place-items: center;
+  font-family: "Play", sans-serif;
+  min-height: 100vh;
+}
+svg {
+  width: 100%;
+  height: auto;
 }
 
-body {
-  background: $black;
-  color: $white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: "Play", sans-serif;
-  text-align: center;
-  min-width: fit-content;
+button {
+  background-color: $color-1;
+  color: $color-2;
+  font-size: 1.5rem;
+  display: inline-block;
+  padding: 1rem 1.3rem;
+  border-radius: 0.65rem;
+  cursor: pointer;
+  transition: 0.3s;
+  &:hover {
+    box-shadow: 0rem 0rem 1rem $second-color;
+  }
 }
