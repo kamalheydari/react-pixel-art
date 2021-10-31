@@ -1,5 +1,5 @@
 {
-  "homepage":  "https://kamalheydari.github.io/react-pixel-art/",
+  "homepage": "https://kamalheydari.github.io/react-pixel-art/",
   "name": "pixel art",
   "version": "0.1.0",
   "private": true,
@@ -13,7 +13,7 @@
     "react-component-export-image": "^1.0.4",
     "react-dom": "^17.0.1",
     "react-scripts": "4.0.1",
-    "web-vitals": "^0.2.4"
+    "web-vitals": "^2.1.2"
   },
   "scripts": {
     "predeploy": "npm run build",
