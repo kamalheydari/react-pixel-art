@@ -5,7 +5,7 @@ you can drawing amazing pixel arts in this app.
 ## Demo
 
 See demo on github pages
-[github search user]( https://kamalheydari.github.io/react-pixel-art/)
+[Pixel Art]( https://kamalheydari.github.io/react-pixel-art/)
 
 ![demo](demo.png)
 
