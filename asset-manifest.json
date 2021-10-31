@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/react-pixel-art/static/css/main.7b4268c0.chunk.css",
+    "main.js": "/react-pixel-art/static/js/main.79b7f5e7.chunk.js",
+    "main.js.map": "/react-pixel-art/static/js/main.79b7f5e7.chunk.js.map",
+    "runtime-main.js": "/react-pixel-art/static/js/runtime-main.c78c7d1b.js",
+    "runtime-main.js.map": "/react-pixel-art/static/js/runtime-main.c78c7d1b.js.map",
+    "static/js/2.4b26b1bd.chunk.js": "/react-pixel-art/static/js/2.4b26b1bd.chunk.js",
+    "static/js/2.4b26b1bd.chunk.js.map": "/react-pixel-art/static/js/2.4b26b1bd.chunk.js.map",
+    "index.html": "/react-pixel-art/index.html",
+    "static/css/main.7b4268c0.chunk.css.map": "/react-pixel-art/static/css/main.7b4268c0.chunk.css.map",
+    "static/js/2.4b26b1bd.chunk.js.LICENSE.txt": "/react-pixel-art/static/js/2.4b26b1bd.chunk.js.LICENSE.txt",
+    "static/media/pixelArt.0a4d5c00.svg": "/react-pixel-art/static/media/pixelArt.0a4d5c00.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c78c7d1b.js",
+    "static/js/2.4b26b1bd.chunk.js",
+    "static/css/main.7b4268c0.chunk.css",
+    "static/js/main.79b7f5e7.chunk.js"
+  ]
+}
