@@ -1,2 +1,27 @@
-# pixel-art-drawing-editor
-Source code for creating a pixel art drawing editor in React. Dynamically set up drawing panel dimensions, color the pixels to your liking and export your finished piece as a PNG sprite. Used in my Youtube tutorial found here: https://www.youtube.com/watch?v=IAD68la3An8
+# Github Search User
+
+you can search username and get information of user and see the important languages, repos, forks and stars in the charts
+
+## Demo
+
+See demo on github pages
+[github search user](https://kamalheydari.github.io/react-github-users/)
+
+![color palette](demo.png)
+
+## Clone
+
+```
+https://github.com/kamalheydari/react-github-users.git
+```
+
+## Using
+
+- react
+- fusioncharts
+- node-sass
+- react-icons
+
+## Color palette
+
+![color palette](git-s-u.png)
