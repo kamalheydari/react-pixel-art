@@ -1,27 +1,27 @@
 # Github Search User
 
-you can search username and get information of user and see the important languages, repos, forks and stars in the charts
+you can drawing amazing pixel arts in this app.
 
 ## Demo
 
 See demo on github pages
 [github search user](https://kamalheydari.github.io/react-github-users/)
 
-![color palette](demo.png)
+![demo](demo.png)
 
 ## Clone
 
 ```
-https://github.com/kamalheydari/react-github-users.git
+https://github.com/kamalheydari/react-pixel-art.git
 ```
 
 ## Using
 
 - react
-- fusioncharts
 - node-sass
-- react-icons
+- react-color
+- react-component-export-image
 
 ## Color palette
 
-![color palette](git-s-u.png)
+![color palette](color-palette.png)
