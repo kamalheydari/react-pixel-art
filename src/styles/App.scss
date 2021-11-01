@@ -17,17 +17,8 @@ html {
     font-size: 0.812rem;
   }
   @include responsive(md) {
-    font-size: 0.875rem;
+    font-size: 0.937rem;
   }
-  // @include responsive(lg) {
-  //   font-size: 0.937rem;
-  // }
-  // @include responsive(xl) {
-  //   font-size: 1rem;
-  // }
-  // @include responsive(xxl) {
-  //   font-size: 1.1rem;
-  // }
 }
 body {
   background: $second-color;

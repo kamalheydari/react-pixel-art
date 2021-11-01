@@ -1,10 +1,12 @@
-
-
+//? Colors
 $primary-color: #bcffb9;
 $second-color: #2bffbf;
 $text-color: #105652;
 $color-1: #f5fdb0;
 $color-2: #b91646;
+
+//? Sizes
+$radius:0.65rem;
 
 //? RESPONSIVE
 @mixin responsive($breakpoint) {
@@ -18,19 +20,6 @@ $color-2: #b91646;
       @content;
     }
   }
-  @if ($breakpoint == lg) {
-    @media (min-width: 992px) {
-      @content;
-    }
-  }
-  @if ($breakpoint == xl) {
-    @media (min-width: 1200px) {
-      @content;
-    }
-  }
-  @if ($breakpoint == xxl) {
-    @media (min-width: 1400px) {
-      @content;
-    }
-  }
 }
+  
+
