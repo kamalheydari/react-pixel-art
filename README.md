@@ -5,15 +5,9 @@ you can drawing amazing pixel arts in this app.
 ## Demo
 
 See demo on github pages
-[Pixel Art]( https://kamalheydari.github.io/react-pixel-art/)
+[Pixel Art](https://kamalheydari.github.io/react-pixel-art/)
 
 ![demo](demo.png)
-
-## Clone
-
-```
-https://github.com/kamalheydari/react-pixel-art.git
-```
 
 ## Using
 
@@ -21,7 +15,3 @@ https://github.com/kamalheydari/react-pixel-art.git
 - node-sass
 - react-color
 - react-component-export-image
-
-## Color palette
-
-![color palette](color-palette.png)
